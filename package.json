@@ -1,0 +1,14 @@
+{
+  "name": "vtt-parser",
+  "version": "1.0.0",
+  "main": "./lib/vtt-parser.js",
+  "bin": "./bin/vtt-parser.js",
+  "dependencies": {
+    "byline": "^4.1.1",
+    "inherits": "^2.0.1",
+    "minimist": "^1.1.0",
+    "object-assign": "^1.0.0",
+    "split": "^0.3.0",
+    "through2": "^0.6.1"
+  }
+}
