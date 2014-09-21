@@ -1,8 +1,8 @@
 {
-  "name": "vtt-parser",
+  "name": "vtt-json",
   "version": "0.0.1",
-  "main": "./lib/vtt-parser.js",
-  "bin": "./bin/vtt-parser.js",
+  "main": "./lib/vtt-json.js",
+  "bin": "./bin/vtt-json.js",
   "dependencies": {
     "byline": "^4.1.1",
     "inherits": "^2.0.1",

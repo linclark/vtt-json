@@ -14,7 +14,7 @@ var argv = minimist(process.argv, {
 });
 
 var headers = argv.headers && argv.headers.toString().split(argv.separator);
-var filename = argv._[2];
+var filename = argv._[3];
 
 if (argv.version) {
     console.log(require('./../package').version);
@@ -29,8 +29,10 @@ else {
     process.exit(2);
 }
 
-input.pipe(vtt())
-    .pipe(through2.obj(function(obj, enc, cb) {
-        cb(null, JSON.stringify(obj, null, '\t'))
-    }))
-    .pipe(output);
+if (argv._[2] === 'parse') {
+    input.pipe(vtt.parse())
+        .pipe(through2.obj(function(obj, enc, cb) {
+            cb(null, JSON.stringify(obj, null, '\t'))
+        }))
+        .pipe(output);
+}
