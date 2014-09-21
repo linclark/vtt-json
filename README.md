@@ -24,6 +24,14 @@ input.pipe(vtt.parse())
     .pipe(output);
 ```
 
+### Command line tool
+
+Files can also be converted from .vtt to JSON on the command line.
+
+```
+vtt-json parse input.vtt --output=output.json
+```
+
 Related projects
 ================
 [node-vtt](https://www.npmjs.org/package/node-vtt)
