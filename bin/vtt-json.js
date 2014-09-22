@@ -36,3 +36,8 @@ if (argv._[2] === 'parse') {
         }))
         .pipe(output);
 }
+
+if (argv._[2] === 'serialize') {
+    input.pipe(vtt.serialize())
+        .pipe(output);
+}
